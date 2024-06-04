@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Task Manager</h1>
+        <form action="/add_task" method="POST">
+            <input type="text" name="task" placeholder="Enter task" required>
+            <input type="number" name="tokens" placeholder="Enter tokens" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <h2>Tasks:</h2>
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task[1] }} - {{ task[3] }} tokens
+                    <a href="/complete_task/{{ task[0] }}">Complete</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <h2>Tokens: {{ token_amount }}</h2>
+        <form action="/redeem_token" method="POST">
+            <select name="redeem_amount" required>
+                <option value="" disabled selected>Select amount to redeem</option>
+                <option value="5">5 Tokens</option>
+                <option value="10">10 Tokens</option>
+            </select>
+            <button type="submit">Redeem Token</button>
+        </form>
+        {% if message %}
+            <h3>{{ message }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

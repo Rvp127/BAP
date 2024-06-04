@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff; /* Set text color to white */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff; /* Set background color to white */
+    color: #000; /* Set text color to black */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button[type="submit"],
+button[type="button"] {
+    display: inline-block;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for background color and scale */
+}
+
+button[type="submit"] {
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Set text color to white */
+}
+
+button[type="submit"]:hover {
+    background-color: #333; /* Darken button color on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+button[type="button"] {
+    background-color: #fff; /* Set background color to white */
+    color: #000; /* Set text color to black */
+}
+
+button[type="button"]:hover {
+    background-color: #eee; /* Lighten button color on hover */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    animation: fadeIn 0.5s ease; /* Fade-in animation for task items */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+a {
+    color: #000; /* Set link color to black */
+    text-decoration: none;
+    float: right;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+a:hover {
+    color: #444; /* Darken link color on hover */
+}
+
+form select {
+    background-color: #fff; /* Set background color of select box to white */
+    color: #000; /* Set text color to black */
+}
